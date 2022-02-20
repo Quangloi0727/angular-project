@@ -1,0 +1,25 @@
+<div class="container">
+  <button type="button" class="btn btn-success" [routerLink]="['/user/add']" [style.margin-top.px] = "20">Thêm mới</button>
+  <h2>Danh sách người dùng trong hệ thống</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>FullName</th>
+        <th>UserName</th>
+        <th>Created</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of arrUser">
+        <td>{{ item.fullname }}</td>
+        <td>{{ item.username }}</td>
+        <td>{{ item.created }}</td>
+        <td>
+          <button type="button" class="btn btn-warning">Edit</button>
+          <button type="button" class="btn btn-danger" [style.margin-left.px] = "10">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
